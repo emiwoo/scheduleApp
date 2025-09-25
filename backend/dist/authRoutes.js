@@ -75,8 +75,8 @@ router.post('/logout', async (req, res) => {
     try {
         res.cookie('token', '', {
             httpOnly: true,
-            sameSite: 'lax',
-            secure: false,
+            sameSite: 'none',
+            secure: true,
             maxAge: 0,
             path: '/'
         });
@@ -92,8 +92,8 @@ const createJWT = (id, res) => {
         const token = jwt.sign({ id: id }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
         res.cookie('token', token, {
             httpOnly: true,
-            sameSite: 'lax',
-            secure: false,
+            sameSite: 'none',
+            secure: true,
             maxAge: 3600 * 1000,
             path: '/'
         });
