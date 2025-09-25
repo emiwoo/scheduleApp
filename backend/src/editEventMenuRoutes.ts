@@ -15,9 +15,10 @@ type Id = {
 router.post('/createevent', (req: AllowedUser, res: Response) => {
     try {
         if (!req.user) throw new Error();
+        const formattedTime = req.body.time + ':00';
         pool.query(`INSERT INTO events (title, priority, time, date, notes, user_id, all_day)
                     VALUES ($1, $2, $3, $4, $5, $6, $7)`, 
-                    [req.body.title, req.body.priority, req.body.time, req.body.date, req.body.notes, req.user.id, req.body.allDay]);
+                    [req.body.title, req.body.priority, formattedTime, req.body.date, req.body.notes, req.user.id, req.body.allDay]);
         res.status(201).json({ success: 'Event created' });
     } catch (error) {
         console.error('/createevent error: ', error);
@@ -41,6 +42,7 @@ router.get('/loaddata/:id', async (req: AllowedUser, res: Response) => {
 router.patch('/updateevent/:id', async (req: AllowedUser, res: Response) => {
     try {
         if (!req.user) throw new Error();
+        const formattedTime = req.body.time + ':00';
         pool.query(`UPDATE events
                     SET title = $1,
                         priority = $2,
@@ -50,7 +52,7 @@ router.patch('/updateevent/:id', async (req: AllowedUser, res: Response) => {
                         all_day = $6
                     WHERE user_id = $7
                         AND id = $8`, 
-                    [req.body.title, req.body.priority, req.body.time, req.body.date, req.body.notes, req.body.allDay, req.user.id, req.params.id]);
+                    [req.body.title, req.body.priority, formattedTime, req.body.date, req.body.notes, req.body.allDay, req.user.id, req.params.id]);
         res.status(200).json({ success: 'Updated event' });
     } catch (error) {
         console.error('/updateevent/:id error: ', error);
