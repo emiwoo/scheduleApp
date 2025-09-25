@@ -21,7 +21,7 @@ interface AllowedUser extends Request {
     user?: Id;
 }
 
-app.use('*', cors({
+app.use(cors({
     origin: process.env.FRONTEND_DOMAIN,
     methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
     credentials: true
