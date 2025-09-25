@@ -1,0 +1,51 @@
+.container {
+    width: 1200px;
+    margin: 50px auto;
+}
+
+.container main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.userSvg {
+    fill: rgb(51,51,51);
+    width: 42.5px;
+    padding: 6.5px;
+}
+
+.userSvg:hover {
+    cursor: pointer;
+}
+
+.showAccount {
+    background-color: rgb(51,51,51);
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    font-weight: 500;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    right: 75px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.container header section:hover .showAccount{
+    opacity: 1;
+}
+
+.container header section {
+    display: flex;
+    align-items: center;
+}
+

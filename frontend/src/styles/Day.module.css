@@ -1,0 +1,37 @@
+.day {
+    border-right: 1px solid rgba(51,51,51, 0.5);
+    border-bottom: 1px solid rgba(51,51,15, 0.5);
+    padding: 6.5px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 107.3px;
+    height: 110.2px;
+    overflow-y: auto;
+}
+
+.day h1 {
+    font-size: 0.85rem;
+    font-weight: 550;
+    margin: 0;
+}
+
+.removeRight {
+    border-right: none;
+}
+
+.removeBottom {
+    border-bottom: none;
+}
+
+.day:hover {
+    cursor: pointer;
+    filter: brightness(0.95);
+    background-color: white;
+}
+
+.disableHoverAndClick {
+    cursor: default;
+    pointer-events: none;
+    filter: brightness(0.85);
+    background-color: white;
+}

@@ -1,0 +1,83 @@
+.eventsContainer {
+    width: 370px;
+    height: 731.2px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0 80px 0;
+    position: relative;
+}
+
+.buttonsContainer {
+    position: absolute;
+    bottom: 0;
+    right: -70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+}
+
+.buttonsContainer .svg {
+    background-color: #b85c44;
+    width: 30px;
+    fill: white;
+    padding: 12.5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1.5px rgba(0,0,0,0.25);
+}
+
+.buttonsContainer section {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buttonsContainer section:hover {
+    cursor: pointer;
+}
+
+.buttonsContainer section div {
+    color: white;
+    background-color: rgb(51,51,51);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 450;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    position: absolute;
+}
+
+.buttonsContainer section:hover div {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.svg1 {
+    left: -124px;
+}
+
+.svg2 {
+    left: -250px;
+}
+
+.container > h1 {
+    position: absolute;
+    top: -60px;
+    font-size: 1.5rem;
+}

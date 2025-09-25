@@ -1,0 +1,79 @@
+.container {
+    margin: 100px auto 0 auto;
+    width: 300px;
+    background-color: white;
+    padding: 30px 30px 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 1px 1.5px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin-top: 30px;
+    position: relative;
+}
+
+.inputContainer input {
+    outline: none;
+    padding: 15px 47.5px 15px 15px;
+    margin-top: 10px;
+    border: 1.25px solid rgba(51,51,51,0.35);
+}
+
+.inputContainer .svg {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    width: 27.5px;
+    fill: rgb(51,51,51);
+}
+
+.svg:hover {
+    cursor: pointer;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.buttonsContainer button {
+    padding: 15px 0;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 1.5px rgba(51,51,51,0.35);
+    background-color: #b85c44;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 15px;
+    filter: brightness(0.65);
+    pointer-events: none;
+}
+
+.buttonsContainer .enabledButton:hover {
+    cursor: pointer;
+}
+
+.buttonsContainer .enabledButton {
+    filter: brightness(1);
+    pointer-events: auto;
+}
+
+.buttonsContainer .link {
+    color: rgb(51,51,51);
+    font-size: 0.9rem;
+}
+
+.error {
+    position: absolute;
+    bottom: 150px;
+    left: 30px;
+    margin: 0;
+    font-style: italic;
+    color: #df2525;
+}

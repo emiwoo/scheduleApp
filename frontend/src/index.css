@@ -1,0 +1,12 @@
+body {
+    font-family: 'Figtree';
+    background-color: #f2f1ec;
+    color: rgb(51,51,51);
+    background-image: radial-gradient(#d6d6d6 2px, transparent 1px);
+    background-size: 55px 55px;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('./assets/Figtree.ttf');
+}

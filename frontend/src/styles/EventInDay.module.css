@@ -1,0 +1,28 @@
+.container {
+    background-color: #b879ff;
+    border-radius: 2.5px;
+    width: 92.78px;
+}
+
+.container p {
+    margin: 1.75px 0 0 0;
+    color: white;
+    font-weight: 200;
+    white-space: nowrap;
+}
+
+.low {
+    background-color: #b879ff;
+}
+
+.middle {
+    background-color: #6fc276;
+}
+
+.high {
+    background-color: #f6bf28;
+}
+
+.critical {
+    background-color: #df2525;
+}

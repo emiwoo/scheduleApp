@@ -1,0 +1,218 @@
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    padding: 40px 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.svg {
+    width: 10px;
+}
+
+.container section {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.dimmer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.titleInput input {
+    padding: 10px;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid rgba(51,51,51, 0.35);
+    color: rgb(51,51,51);
+}
+
+.titleInput button {
+    background-color: #6488ea;
+    filter: brightness(0.65);
+    padding: 15px 25px;
+    font-weight: 500;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    box-shadow: 0 1px 1.5px rgba(0,0,0,0.25);
+    margin-left: 40px;
+    pointer-events: none;
+}
+
+.titleInput .enabledButton {
+    filter: brightness(1);
+    pointer-events: auto;
+}
+
+.titleInput button:hover {
+    cursor: default;
+}
+
+.titleInput .enabledButton:hover {
+    cursor: pointer;
+}
+
+.dateInput {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.dateInput label {
+    font-size: 1.25rem;
+}
+
+.dateInput input {
+    padding: 10px;
+    font-family: 'Figtree';
+    font-size: 1rem;
+    border: 1.25px solid rgba(51,51,51,0.35);
+    color: rgb(51,51,51);
+    outline: none;
+}
+
+.priorityInput {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.priorityInput label {
+    font-size: 1.25rem;
+}
+
+.priorityInput img {
+    width: 40px;
+    padding: 7.5px;
+    border-radius: 8.5px;
+    box-shadow: 0 1px 1.5px rgba(0,0,0,0.25);
+}
+
+.priorityInput img:hover {
+    cursor: pointer;
+}
+
+.timeInput {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.timeInput label {
+    font-size: 1.25rem;
+}
+
+.timeInput input {
+    padding: 10px;
+    font-family: 'Figtree';
+    font-size: 1rem;
+    border: 1.25px solid rgba(51,51,51,0.35);
+    color: rgb(51,51,51);
+    outline: none;
+    margin-left: 15px;
+}
+
+.timeInput .svg {
+    border: 1.5px solid rgb(51,51,51, 0.35);
+    width: 30px;
+    height: 30px;
+    border-radius: 2.5px;
+    fill: white;
+    padding: 2.5px;
+}
+
+.timeInput .svg:hover {
+    cursor: pointer;
+}
+
+.timeInput section {
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+}
+
+.timeInput .clickedDiv {
+    background-color: #6488ea;
+    border-color: #6488ea;
+}
+
+.notesInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notesInput label {
+    font-size: 1.25rem;
+}
+
+.notesInput textarea {
+    width: 400px;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    font-family: 'Figtree';
+    font-size: 1rem;
+    border: 1.25px solid rgba(51,51,51,0.35);
+    color: rgb(51,51,51);
+    outline: none;
+}
+
+.cancelAndDeleteButtons {
+    display: flex;
+    gap: 40px;
+}
+
+.cancelAndDeleteButtons .svg {
+    fill: white;
+    width: 35px;
+    box-shadow: 0 1px 1.5px rgba(0,0,0,0.35);
+    padding: 10px;
+    border-radius: 8.5px;
+}
+
+.cancelAndDeleteButtons .svg1 {
+    background-color: #df2525;
+}
+
+.cancelAndDeleteButtons .svg2 {
+    background-color: #b85c44;
+}
+
+.cancelAndDeleteButtons .svg:hover {
+    cursor: pointer;
+}
+
+.low {
+    background-color: #b879ff;
+}
+
+.middle {
+    background-color: #6fc276;
+}
+
+.high {
+    background-color: #f6bf28;
+}
+
+.critical {
+    background-color: #df2525;
+}
